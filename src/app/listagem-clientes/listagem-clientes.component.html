@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Listagem de Clientes</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of clientes | async">
+                    <td>{{cliente.nome}}</td>
+                    <td>{{cliente.endereco}}</td>
+                    <td>{{cliente.telefone}}</td>
+                    <td>{{cliente.email}}</td>
+                    <div class="row" style="width: 300px;">
+                        <td><button (click)="excluirCliente(cliente.codigo)" class="btn btn-danger">Excluir</button>
+                            <button (click)="editarCliente(cliente.codigo)" class="btn btn-info"
+                                style="margin-left: 3px;">Editar</button>
+                            <button (click)="detalhesCliente(cliente.codigo)" class="btn btn-info"
+                                style="margin-left: 3px; margin-right: 0px;">Detalhes</button>
+                        </td>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

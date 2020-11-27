@@ -1,0 +1,21 @@
+<h2>Informações do Cliente</h2>
+
+<hr />
+<div *ngIf="cliente">
+    <div>
+        <label><b>Nome: </b></label> {{cliente.nome}}
+    </div>
+    <div>
+        <label><b>Endereço: </b></label> {{cliente.endereco}}
+    </div>
+    <div>
+        <label><b>Telefone: </b></label> {{cliente.telefone}}
+    </div>
+    <div>
+        <label><b>E-mail: </b></label> {{cliente.email}}
+    </div>
+</div>
+
+<br>
+<br>
+<button (click)="listagem()" class="btn btn-primary">Voltar</button><br>
